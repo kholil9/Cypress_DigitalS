@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-24T16:48:31.015Z",
+    "end": "2025-06-24T16:48:39.475Z",
+    "duration": 8460,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70c2bd73-68e3-4458-a98f-a66732fcf583",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login\\user_dashboard.cy.js",
+      "file": "cypress\\e2e\\Login\\user_dashboard.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "537fe693-157d-49ad-868b-3ff4acd4b538",
+          "title": "Dashboard Verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verfikasi feature yang terdapat di menu Dashboard",
+              "fullTitle": "Dashboard Verification Verfikasi feature yang terdapat di menu Dashboard",
+              "timedOut": null,
+              "duration": 6305,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../videos/user_dashboard.cy.js.mp4\"",
+              "code": "//LOGIN untuk Username Muhammad Kholil\ncy.visit('http://localhost:3000/');\ncy.login();\n// Verifikasi Login Berhasil\ncy.get(':nth-child(2) > .text-\\\\[14px\\\\]').should('be.visible').and('contain', 'kholilrahimullah05');\n// cy.get('.op-navbar > :nth-child(1) > .op-btn > .fa-light').click();\n// //Verifikasi Dashboard \n// cy.wait(1000);\n// // Request Signatures\n// cy.get('.text-lg').should('be.visible')\n// .and('contain', 'Request signatures');\n// // Need your Signatures\n// cy.wait(1000)\n// cy.get('.op-bg-primary > .cursor-pointer > .justify-start > .font-medium > .text-base')\n// .should('be.visible')\n// .and('contain', 'Need your Signature');\n// Out for Signatures\n// Recent signatures\n// Recently Sent for signatures",
+              "err": {},
+              "uuid": "ddd70431-1d31-458f-8877-29a175e8759a",
+              "parentUUID": "537fe693-157d-49ad-868b-3ff4acd4b538",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ddd70431-1d31-458f-8877-29a175e8759a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name].html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "useInlineDiffs": true,
+        "embeddedScreenshots": true,
+        "reportDir": "cypress/results",
+        "reportFilename": "[name].html",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "cdn": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-24T16:48:18.039Z",
+    "end": "2025-06-24T16:48:27.893Z",
+    "duration": 9854,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "785bcfea-b633-46b5-a196-519f6fded762",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login\\e2e_positif.cy.js",
+      "file": "cypress\\e2e\\Login\\e2e_positif.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0734e85-24c3-4d7e-9ebb-9849170fe6be",
+          "title": "E2E Positive Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Succesfully Login - Fully Approved Dokumen",
+              "fullTitle": "E2E Positive Cases Succesfully Login - Fully Approved Dokumen",
+              "timedOut": null,
+              "duration": 8267,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"../screenshots/e2e_positif.cy.js/E2E Positive Cases -- Succesfully Login - Fully Approved Dokumen (failed).png\",\n  \"../videos/e2e_positif.cy.js.mp4\"\n]",
+              "code": "/// LOGIN\ncy.get('[data-cy=\"email\"]').type('testengineer2520@gmail.com');\ncy.get('[data-cy=\"password\"]').type('TestQA2025');\ncy.get('.op-btn').click();\n//Dashboard Verification\ncy.get(':nth-child(2) > .text-\\\\[14px\\\\]').should('be.visible').and('contain', 'testengineer2520');\ncy.get('.text-sm > :nth-child(2) > .flex').click();\n/// CHOOSE DOCUMENT TYPE\n// await cy.get('#file').selectFile('cypress/fixtures/test.pdf').then(async (input) => {\n//  await cy.get('[data-cy=\"document-title\"]').type('testing dokumen 2025');\n// });\ncy.get('#file').selectFile('cypress/fixtures/test.pdf');\ncy.get('[data-cy=\"document-title\"]').type('testing dokumen 2025');\n/// FILL DOCUMENT TITLE\n/* ADD NEW SIGNER */\n// cy.get('.cursor-pointer > .fa-light').click();\n// cy.get('#name').type('kholil');\n// cy.get('#email').type('kholilrahimullah05@gmail.com');\n// cy.get('#phone').type('0859278716631');\n// cy.get(':nth-child(3) > .flex > .op-btn-primary').click();\n///CHOOSE SIGNER\ncy.get('.css-1wy0on6').click();\ncy.get('#react-select-2-option-1').click();\ncy.get('.css-n9qnu9').click();\n// /NOTE\ncy.get(':nth-child(6) > .op-input').clear('Please review and sign this document');\ncy.get(':nth-child(6) > .op-input').type('Dokumen tester');\n// ///SELECT FOLDER\ncy.get('.relative > .rounded').click();\n// ///CREATE FOLDER\n// // cy.get('.op-btn-seconday').click();\n// // cy.get('#createFolder > :nth-child(2) > .op-input').type('Tugas Akhir1')\n// // cy.get('#createFolder > :nth-child(4) > .op-btn').click();\n// // cy.get(':nth-child(3) > .flex > .op-btn-primary').click();\n// ///CHOOSE FOLDER\ncy.get('.op-btn op-btn-primary').click();\n// cy.get(':nth-child(3) > .flex > .op-btn-primary').click();\n// ///ADVANCED OPTIONS\n// cy.get('#advanced-options').click();\n// cy.get('.overflow-y-auto > .mt-2 > .op-input').clear('15');\n// cy.get('.overflow-y-auto > .mt-2 > .op-input').type('30');\n// ///HIDE OPTIONS\n// cy.get('[data-cy=\"hide-advanced-options\"]').click();\n// cy.get('.op-btn-primary').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-cy=\"email\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-cy=\"email\"]`, but never found it.\n    at Context.eval (webpack://cypress_frame/./cypress/e2e/Login/e2e_positif.cy.js:10:7)",
+                "diff": null
+              },
+              "uuid": "16f0a845-ca17-4fe4-ae11-11bdb06a7165",
+              "parentUUID": "c0734e85-24c3-4d7e-9ebb-9849170fe6be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "16f0a845-ca17-4fe4-ae11-11bdb06a7165"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8267,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name].html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "useInlineDiffs": true,
+        "embeddedScreenshots": true,
+        "reportDir": "cypress/results",
+        "reportFilename": "[name].html",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "cdn": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

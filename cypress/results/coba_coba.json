@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-24T16:48:07.550Z",
+    "end": "2025-06-24T16:48:14.028Z",
+    "duration": 6478,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f543ad7c-f047-403f-9bdb-180876364f0b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login\\coba_coba.cy.js",
+      "file": "cypress\\e2e\\Login\\coba_coba.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "efa0a8af-09a2-4ff9-a591-f7c5250c6d85",
+          "title": "Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user can delete",
+              "fullTitle": "Dashboard user can delete",
+              "timedOut": null,
+              "duration": 5093,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../videos/coba_coba.cy.js.mp4\"",
+              "code": "//Login to the application\ncy.visit('http://localhost:3000/');\ncy.login();\n// Traversal \ncy.wait(1000);\ncy.get('.fa-light.fa-bars.text-xl.text-base-content').click();\ncy.get('tr.border-y-\\\\[1px\\\\] td').contains('go').parent().find('div [title=\"Delete\"]').click();\n// Make Sure Delete Confirmation\ncy.get('.text-lg.font-normal.text-black').contains('Are you sure you want to delete this document?').should('be.visible');\ncy.get('.flex.items-center.mt-3.gap-2.text-white').find('button').contains('Yes');",
+              "err": {},
+              "uuid": "9059c332-b77c-4a8d-9381-f380be0fe574",
+              "parentUUID": "efa0a8af-09a2-4ff9-a591-f7c5250c6d85",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9059c332-b77c-4a8d-9381-f380be0fe574"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5093,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name].html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "useInlineDiffs": true,
+        "embeddedScreenshots": true,
+        "reportDir": "cypress/results",
+        "reportFilename": "[name].html",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "cdn": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
