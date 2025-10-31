@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cypress_frame
 
 
@@ -91,3 +92,22 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+=======
+# 🚀 Cypress_DigitalS
+Automated testing framework for web applications using Cypress. Designed to improve testing efficiency and ensure product reliability.
+ 
+## 🛠️ Tech Stack
+- Cypress Framework
+
+## 📸 Demo
+Tambahkan screenshot atau gif hasil project:
+![Demo Screenshot](./docs/demo.png)
+
+## 📦 Installation for Apps to test
+```bash
+git clone https://github.com/username/project-name.git](https://github.com/muhyiabdulb/opensign.git
+cd project-name
+npm install
+npm start
+
+>>>>>>> 624d3c62c772bd6b40111e9f7572fb611bdf815e
